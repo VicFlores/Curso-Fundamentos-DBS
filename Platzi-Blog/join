@@ -1,0 +1,41 @@
+use b4qrovuhf7vrrekpjydx;
+
+/* left join => trae campos sin importar tengan o no informacion */
+select * from usuarios
+left join posts on usuarios.id_usuario = posts.id_usuario;
+
+/* traer usuario que no tenga post */
+select * from usuarios
+left join posts on usuarios.id_usuario = posts.id_usuario
+where posts.id_usuario is null;
+
+/* right join => trae campos sin importar tengan o no informacion */
+select * from usuarios
+right join posts on usuarios.id_usuario = posts.id_usuario;
+
+/* traer post que no tenga usuario */
+select * from usuarios
+left join posts on usuarios.id_usuario = posts.id_usuario
+where posts.id_usuario is null;
+
+/* inner join => trae campos que realmenten tenga informacion */
+select * from usuarios
+inner join posts on usuarios.id_usuario = posts.id_usuario;
+
+/* traer toda la info de ambas tablas sin importar nada */
+select * from usuarios
+right join posts on usuarios.id_usuario = posts.id_usuario
+union
+select * from usuarios
+left join posts on usuarios.id_usuario = posts.id_usuario;
+
+
+
+
+
+
+
+
+
+
+

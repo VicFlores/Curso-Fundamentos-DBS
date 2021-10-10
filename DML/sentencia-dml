@@ -1,0 +1,48 @@
+use b4qrovuhf7vrrekpjydx;
+
+/* DML */
+
+/* Insert */
+
+insert into people (last_name, first_name, addres, city)
+values ("Flores", "Vic", "Col Santa Matilde", "San Salvador"),
+("Batres", "Stephanie", "Santa Anita", "San Salvador"),
+("Aguilar", "Fernando", "Calle Circunvalacion", "San Salvador"),
+("Cañada", "Madeleyne", "San Juan Opico km10", "La Libertad");
+
+/* Update */
+
+update people 
+set last_name = "Hernandez", city = "San Juan Opico"
+where person_id = 4;
+
+/* No nos perminita correr el query porque incluye un cambio masivo de datos */
+update people
+set first_name = "Alejandra"
+where city = "San Salvador";
+
+/* No nos perminita correr el query porque incluye un cambio masivo de datos */
+update people
+set first_name = "Katherine";
+
+/* Delete */
+
+delete from people
+where person_id = 1;
+
+delete from people;
+
+/* Select */
+
+select first_name, last_name
+from people
+
+
+
+
+
+
+
+
+
+

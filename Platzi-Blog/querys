@@ -1,0 +1,29 @@
+use b4qrovuhf7vrrekpjydx;
+
+
+/* querys basicos */
+select * from posts
+where fecha_publicacion > "2021-09-29 06-00-00";
+
+select titulo, fecha_publicacion, estatus
+from posts;
+
+/* alias para los campos */
+select titulo as "encabezado", fecha_publicacion as "Publicado en:", estatus as "Estado"
+from posts;
+
+/* count */
+select count(*) as "Total de posts"
+from posts;
+
+
+
+
+
+
+
+
+
+
+
+

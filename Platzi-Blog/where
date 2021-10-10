@@ -1,0 +1,42 @@
+use b4qrovuhf7vrrekpjydx;
+
+/* traer usuarios menores o iguales a id 4 */
+select * from posts
+where id_usuario <= 4;
+
+/* traer posts activos */
+select * from posts
+where estatus = "activo";
+
+/* traer posts inactivos */
+select * from posts
+where id_usuario != 1;
+
+/* traer posts con fecha de publicacion mayor a */
+select * from posts
+where fecha_publicacion > "2021-01-01";
+
+/* traer post entre fechas */
+select * from posts
+where fecha_publicacion between '2021-09-29 05:33:34' and '2021-09-29 06:12:34';
+
+/* traer posts entre años */
+select * from posts
+where year(fecha_publicacion) between '2021' and '2022';
+
+/* traer posts de un mes en espeficifico */
+select * from posts
+where month(fecha_publicacion) = '05';
+
+/* Cuando queremos filtrar por algo en especifico */
+/* like '%palabra' => busca palabras que terminen */
+/* like 'palabra%' => busca palabras que empiezen */
+/* like '%palabra' => busca palabras que contengan */
+
+select * from posts
+where titulo like '%en%';
+
+
+
+
+

@@ -1,0 +1,45 @@
+use b4qrovuhf7vrrekpjydx;
+
+/* Sentencias DDL */
+
+/* Create */
+
+create table people(
+	person_id int primary key auto_increment,
+    last_name varchar(255) not null,
+    first_name varchar(255) not null,
+    addres varchar(255) not null,
+    city varchar(255) not null
+);
+
+/* View */
+
+create view v_people as
+select * from people;
+
+/* Alter */
+
+alter table people
+add column date_of_birth datetime not null;
+
+alter table people 
+change column date_of_birth date_of_birth date null default null ;
+
+alter table people
+drop column date_of_birth;
+
+/* Drop */
+
+drop table people;
+
+drop database nombre_database;
+
+
+
+
+
+
+
+
+
+

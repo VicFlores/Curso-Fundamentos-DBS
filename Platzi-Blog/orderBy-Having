@@ -1,0 +1,36 @@
+use b4qrovuhf7vrrekpjydx;
+
+/* Por defecto es asc */
+select * from posts
+order by fecha_publicacion desc;
+
+/* Por defecto ordena de forma alfabeticamente */
+select * from posts
+order by titulo;
+
+
+select * from posts
+order by id_usuario;
+
+/* Limit => cantidad de registros maximos que deseemos ver */
+select * from posts
+order by fecha_publicacion
+limit 2;
+
+/* Havin => es el WHERE del GROUP BY, por que puedes usar WHERE para filtrar los datos antes de agrupar 
+y el HAVING para filtrar los resultados de la agrupación*/
+select monthname(fecha_publicacion) as post_month, estatus, count(*) as post_quantity
+from posts
+group by estatus, post_month
+having post_quantity > 1
+order by post_month;
+
+
+
+
+
+
+
+
+
+

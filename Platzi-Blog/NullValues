@@ -1,0 +1,18 @@
+use b4qrovuhf7vrrekpjydx;
+
+select * from posts
+where id_usuario is null;
+
+select * from posts
+where id_usuario is not null;
+
+/* id usuario no nulo y el estatus sea activo... */
+select * from posts
+where id_usuario is not null
+and estatus = 'activo'
+and id_usuario <= 4
+and id_categoria = 1;
+
+
+
+
